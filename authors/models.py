@@ -22,7 +22,6 @@ class Author(models.Model):
         comments = sum(c['rating'] for c in comments)
         self.rating = posts + comments + post_comments
 
-
 class Category(models.Model):
     name = models.CharField(unique=True, max_length=256)
 
